@@ -22,11 +22,10 @@ else:
 
     #Stores current temperature and rounds to nearest whole number
     temp = round(weather_data.json()['main']['temp'])
-
-    high = weather_data.json()['main']['temp_max']
-    low = weather_data.json()['main']['temp_min']
-    wind = weather_data.json()['wind']['speed']
+    high = round(weather_data.json()['main']['temp_max'])
+    low = round(weather_data.json()['main']['temp_min'])
+    #wind = weather_data.json()['wind']['speed']
 
 #Prints results of current weather
     print(f"The weather in {user_input} is: {weather}")
-    print(f"The temperature in {user_input} is: {temp} Fahrenheit")
+    print(f"The temperature in {user_input} is: {temp} Fahrenheit with a high of {high} and a low of {low}")
